@@ -1,0 +1,24 @@
+#system header
+define type _Main_ {
+	public {
+		define var EXIT_SUC 0
+		define var EXIT_FAIL 1
+		define type _Window_ {
+			public{}
+			private {
+				var width,height;
+			}
+			func decl init(width = 300,height = 200) {
+				this.width = width;
+				this.height = height;
+			}
+		}
+	}
+	private {
+		var script,namespace,returning;
+	}
+	func decl init(script,returning) {
+		this.script = script;
+		this.returning = returning;
+	}
+}
